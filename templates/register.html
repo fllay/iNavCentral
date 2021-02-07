@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-error">
+    <div class="hpanel">
+        <div class="panel-body">
+            <form id="registerForm"  method="POST">
+                <div class="row">
+                    <div class="form-group col-lg-6">
+                        <label>Firstname</label>
+                        <input class="form-control" id="firstname" name="firstname">
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label>Lastname</label>
+                        <input class="form-control" id="lastname" name="lastname">
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label>Email Address</label>
+                        <input class="form-control" id="email" name="email">
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label>Username</label>
+                        <input class="form-control" id="username" name="username">
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label>Password</label>
+                        <input type="password" class="form-control" id="password" name="password">
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label>Confirm Password</label>
+                        <input type="password" class="form-control" id="confirm" name="confirm">
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-success loginbtn">Register</button>
+                    <button class="btn btn-default" id="btCancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $('#btCancel').click(function (evt) {
+            window.location.href = "/user";
+            evt.preventDefault();
+        });
+    });
+</script>
+{% endblock %}

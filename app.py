@@ -68,6 +68,17 @@ def network():
 def user():
     return render_template("user.html")
 
+@app.route('/register',methods=['GET','POST'])
+def register():
+    if request.method == 'POST':
+        firstname = request.form['']
+        lastname = request.form['']
+        email = request.form['']
+        username = request.form['username']
+        password = request.form['']
+        
+    return render_template("register.html")
+
 @app.route('/datalogging')
 def datalogging():
     return render_template("datalogging.html")
