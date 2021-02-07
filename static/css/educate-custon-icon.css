@@ -71,9 +71,6 @@
 .educate-form:before {
   content: "\e90a";
 }
-.educate-home:before {
-  content: "\e90b";
-}
 .educate-interface:before {
   content: "\e90c";
 }
@@ -118,4 +115,7 @@
 }
 .educate-price-tags:before {
   content: "\e936";
+}
+.educate-home:before {
+  content: "\e90b";
 }
