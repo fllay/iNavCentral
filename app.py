@@ -21,6 +21,8 @@ users = []
 users.append(User(id=1,username='Admin',password='password'))
 users.append(User(id=2,username='User',password='password'))
 
+global COOKIE_TIME_OUT
+COOKIE_TIME_OUT = 60*60*24*7 #7 days
 
 app = Flask(__name__)
 app.secret_key = 'somesecretkkeyatsp'
@@ -37,7 +39,7 @@ def signin():
     if request.method == 'POST':
         session.pop('user_id', None)
         username = request.form['username']
-        password = request.form['password']
+        password = request.form['password']        
 
         user = [x for x in users if x.username == username][0]
         if user and user.password == password:
@@ -57,6 +59,18 @@ def log_out():
 @app.route('/index')
 def index():
     return render_template("index.html")
+
+@app.route('/network')
+def network():
+    return render_template("network.html")
+
+@app.route('/user')
+def user():
+    return render_template("user.html")
+
+@app.route('/datalogging')
+def datalogging():
+    return render_template("datalogging.html")
 
 @app.route('/home')
 def home():

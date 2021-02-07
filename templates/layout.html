@@ -50,6 +50,12 @@
     <!-- responsive CSS
         ============================================ -->
     <link rel="stylesheet" href="{{ url_for('static',filename='css/responsive.css') }}">
+    <!-- jquery
+        ============================================ -->
+    <script src="{{ url_for('static',filename='js/vendor/jquery-1.12.4.min.js') }}"></script>
+    <!-- bootstrap JS
+       ============================================ -->
+    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
 </head>
 <body>
     <!--[if lt IE 8]>
@@ -71,8 +77,9 @@
                                 <span class="mini-click-non">Setup</span>
                             </a>
                             <ul class="submenu-angle" aria-expanded="true">
-                                <li><a title="Network" href="index.html"><span class="mini-sub-pro">Network</span></a></li>
+                                <li><a title="Network" href="network"><span class="mini-sub-pro">Network</span></a></li>
                                 <li><a title="I/O EMG STOP" href="index-1.html"><span class="mini-sub-pro">I/O EMG STOP</span></a></li>
+                                <li><a title="User" href="user"><span class="mini-sub-pro">User</span></a></li>
                             </ul>
                         </li>
                         <li>
@@ -104,7 +111,7 @@
                             </a>
                         </li>
                         <li>
-                            <a title="Landing Page" href="events.html" aria-expanded="false">
+                            <a title="Landing Page" href="datalogging" aria-expanded="false">
                                 <span class="fa fa-calendar icon-wrap" aria-hidden="true"></span>
                                 <span class="mini-click-non">Data Logging</span>
                             </a>
@@ -843,14 +850,7 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- jquery
-        ============================================ -->
-    <script src="{{ url_for('static',filename='js/vendor/jquery-1.12.4.min.js') }}"></script>
-    <!-- bootstrap JS
-        ============================================ -->
-    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+    </div>       
     <!-- wow JS
         ============================================ -->
     <script src="{{ url_for('static',filename='js/wow.min.js') }}"></script>
