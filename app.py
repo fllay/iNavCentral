@@ -1,18 +1,58 @@
 import os
 from threading import  Thread
-from flask import Flask, render_template
+from flask import Flask, render_template, request, session, redirect, url_for, g
 import time
 import socket
 import signal
 import sys
 from db.db import *
+from db.Authenticate import *
+
+class User:
+    def __init__(self, id ,username, password):
+        self.id = id
+        self.username = username
+        self.password = password
+
+    def __repr__(self):
+        return f'<User: {self.username}>'
+
+users = []
+users.append(User(id=1,username='Admin',password='password'))
+users.append(User(id=2,username='User',password='password'))
 
 
 app = Flask(__name__)
+app.secret_key = 'somesecretkkeyatsp'
 
-@app.route('/')
+@app.before_request
+def before_request():
+    if 'user_id' in session:
+        user = [x for x in users if x.id == session['user_id']][0]
+        g.user = user
+
+
+@app.route('/signin',methods=['GET','POST'])
 def signin():
+    if request.method == 'POST':
+        session.pop('user_id', None)
+        username = request.form['username']
+        password = request.form['password']
+
+        user = [x for x in users if x.username == username][0]
+        if user and user.password == password:
+                session['user_id'] = user.id
+                return redirect(url_for('index'))
+
+        return redirect(url_for('signin'))
+
+
     return render_template("signin.html")
+
+@app.route('/log_out')
+def log_out():
+    session.pop('user_id',None)
+    return redirect(url_for('signin'))
 
 @app.route('/index')
 def index():
@@ -55,14 +95,16 @@ thread1 = Thread(target=run_server)
 
 def signal_handler(signal, frame):
     global thread1,app
-    print(" * Terminate Flask server")
+    print(" * Terminate Flask server")       
     sys.exit()
 
 try:
-   if __name__ == "__main__": 
+   if __name__ == "__main__":       
       signal.signal(signal.SIGINT, signal_handler)
-      thread1.start()
-      os.system("node mqtt_broker/broker.js")
+      app.run(debug=True)  
+      #thread1.start()
+      os.system("node mqtt_broker/broker.js")      
 except  Exception as e:
      print(e)
+
 
