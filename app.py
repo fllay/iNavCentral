@@ -65,18 +65,20 @@ def network():
     return render_template("network.html")
 
 @app.route('/user')
-def user():
-    return render_template("user.html")
+def user():    
+    return render_template("user.html", doc= get_list())
 
 @app.route('/register',methods=['GET','POST'])
 def register():
     if request.method == 'POST':
-        firstname = request.form['']
-        lastname = request.form['']
-        email = request.form['']
+        firstname = request.form['firstname']
+        lastname = request.form['lastname']
+        email = request.form['email']
         username = request.form['username']
-        password = request.form['']
-        
+        password = request.form['password']        
+        add_new_user()
+        return redirect(url_for('user'))
+
     return render_template("register.html")
 
 @app.route('/datalogging')

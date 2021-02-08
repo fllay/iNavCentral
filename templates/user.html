@@ -21,40 +21,31 @@
                                 <th>Firstname</th>
                                 <th>Lastname</th>
                                 <th>Email</th>
-                                <th>Status</th>
                                 <th>Role</th>
-                                <th></th>                                
-                            </tr>
+                                <th>Status</th>                                
+                                <th></th>
+                            </tr>                            
+                            {% for x in doc %}
                             <tr>
-                                <td>1</td>
-                                <td>Admin</td>                                
-                                <td>John </td>
-                                <td>Alva</td>
-                                <td>admin@gmail.com</td>                                
+                                <td>{{x._id}}</td>
+                                <td>{{x.username}}</td>
+                                <td>{{x.firstname}} </td>
+                                <td>{{x.lastname}}</td>
+                                <td>{{x.email}}</td>
                                 <td>Admin</td>
                                 <td>
-                                    <button class="pd-setting">Active</button>
+                                    {%if x.status == 1%}
+                                        <button class="pd-setting">Active</button>
+                                    {% else %}
+                                        <button class="ds-setting">Disabled</button>
+                                    {% endif %}
                                 </td>
                                 <td>
                                     <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
                                     <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>User</td>
-                                <td>John </td>
-                                <td>Alva</td>
-                                <td>admin@gmail.com</td>   
-                                <td>User</td>
-                                <td>
-                                    <button class="ds-setting">Disabled</button>
-                                </td>
-                                <td>
-                                    <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                    <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                </td>
-                            </tr>                       
+                            {%endfor%}
                         </table>
                     </div>
                     <div class="custom-pagination">
@@ -73,6 +64,7 @@
         </div>
     </div>
 </div>
+
 <!-- Static Table End -->
 <!-- data table JS
        ============================================ -->
