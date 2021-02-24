@@ -1,4 +1,29 @@
 {% extends "layout.html" %}
 {% block content %}
-
+<div class="google-maps-area mg-b-15">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="sparkline8-list responsive-mg-b-30">
+                    <div class="sparkline8-hd">
+                        <div class="main-sparkline8-hd">
+                            <h1>Map <span class="table-project-n">Monitor</span></h1>
+                        </div>
+                    </div>
+                    <div class="sparkline8-graph">
+                        <div class="google-map-single">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>      
+    </div>    
+</div>
+<script>
+    $(function () {
+         $('.breadcome-area').hide();
+    });
+</script>
 {% endblock %}

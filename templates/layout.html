@@ -72,6 +72,52 @@
                 <nav class="sidebar-nav left-sidebar-menu-pro">
                     <ul class="metismenu" id="menu1">
                         <li>
+                            <a title="Landing Page" href="index" aria-expanded="false">
+                                <span class="fa fa-map-o icon-wrap" aria-hidden="true"></span>
+                                <span class="mini-click-non">Map Monitor</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a title="Landing Page" href="queuing" aria-expanded="false">
+                                <span class="fa fa-tasks icon-wrap" aria-hidden="true"></span>
+                                <span class="mini-click-non">Queuing Calling</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="#">
+                                <span class="fa fa-desktop icon-wrap"></span>
+                                <span class="mini-click-non">Traffic Control</span>
+                            </a>
+                            <ul class="submenu-angle" aria-expanded="true">
+                                <li><a title="Section List" href="sectionlist"><span class="mini-sub-pro">Section List</span></a></li>
+                                <li><a title="Section Column" href="sectioncolumn"><span class="mini-sub-pro">Section Column</span></a></li>
+                            </ul>
+                        </li>                       
+                        <li>
+                            <a title="Landing Page" href="events.html" aria-expanded="false">
+                                <span class="fa fa-send-o icon-wrap" aria-hidden="true"></span>
+                                <span class="mini-click-non">User Interface</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a title="Landing Page" href="car" aria-expanded="false">
+                                <span class="fa fa-car icon-wrap" aria-hidden="true"></span>
+                                <span class="mini-click-non">Car Interface</span>
+                            </a>
+                        </li>                       
+                        <li>
+                            <a class="has-arrow" href="#">
+                                <span class="fa fa-calendar icon-wrap"></span>
+                                <span class="mini-click-non">Data Logging</span>
+                            </a>
+                            <ul class="submenu-angle" aria-expanded="true">
+                                <li><a title="Call Request" href="datalogging"><span class="mini-sub-pro">Call Request</span></a></li>
+                                <li><a title="Payout Of Queuing" href="payout"><span class="mini-sub-pro">Payout Of Queuing</span></a></li>
+                                <li><a title="Car Process Finish" href="carprocess"><span class="mini-sub-pro">Car Process Finish</span></a></li>
+                                <li><a title="Car Message" href="message"><span class="mini-sub-pro">Car Message</span></a></li>
+                            </ul>
+                        </li>                           
+                        <li>
                             <a class="has-arrow" href="index.html">
                                 <span class="fa fa-gears icon-wrap"></span>
                                 <span class="mini-click-non">Setup</span>
@@ -82,7 +128,7 @@
                                 <li><a title="I/O EMG STOP" href="user"><span class="mini-sub-pro">User</span></a></li>
                             </ul>
                         </li>
-                        <li>
+                        <!--<li>
                             <a class="has-arrow" href="index.html">
                                 <span class="fa fa-desktop icon-wrap"></span>
                                 <span class="mini-click-non">Monitor</span>
@@ -92,12 +138,7 @@
                                 <li><a title="I/O EMG STOP" href="index-1.html"><span class="mini-sub-pro">Current Job</span></a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a title="Landing Page" href="events.html" aria-expanded="false">
-                                <span class="fa fa-tasks icon-wrap" aria-hidden="true"></span>
-                                <span class="mini-click-non">Queuing</span>
-                            </a>
-                        </li>
+                        
                         <li>
                             <a title="Landing Page" href="events.html" aria-expanded="false">
                                 <span class="fa fa-car icon-wrap" aria-hidden="true"></span>
@@ -109,13 +150,8 @@
                                 <span class="fa fa-home icon-wrap" aria-hidden="true"></span>
                                 <span class="mini-click-non">Origin Home</span>
                             </a>
-                        </li>
-                        <li>
-                            <a title="Landing Page" href="datalogging" aria-expanded="false">
-                                <span class="fa fa-calendar icon-wrap" aria-hidden="true"></span>
-                                <span class="mini-click-non">Data Logging</span>
-                            </a>
-                        </li>                                       
+                        </li>-->
+                                                          
                     </ul>
                 </nav>
             </div>
@@ -778,26 +814,35 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="mobile-menu">
                                 <nav id="dropdown">
-                                    <ul class="mobile-menu-nav">
+                                    <ul class="mobile-menu-nav">                                   
+                                        <li><a href="index">Map Monitor</a></li>
+                                        <li><a href="queuing">Queuing Calling</a></li>
+                                        <li>
+                                            <a data-toggle="collapse" data-target="#Charts" href="#">Traffice Control <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                            <ul class="collapse dropdown-header-top">
+                                                <li><a href="index.html">Section List</a></li>
+                                                <li><a href="index-1.html">Section Column</a></li>
+                                            </ul>
+                                        </li>      
+                                        <li><a href="events.html">User Interface</a></li>
+                                        <li><a href="events.html">Car Interface</a></li>
+                                        <li>
+                                            <a data-toggle="collapse" data-target="#Charts" href="#">Data Logging <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                            <ul class="collapse dropdown-header-top">
+                                                <li><a href="datalogging">Call Request</a></li>
+                                                <li><a href="payout">Payout Of Queuing</a></li>
+                                                <li><a href="carprocess">Car Process Finish</a></li>
+                                                <li><a href="message">Car Message</a></li>
+                                            </ul>
+                                        </li>     
                                         <li>
                                             <a data-toggle="collapse" data-target="#Charts" href="#">Setup <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                             <ul class="collapse dropdown-header-top">
                                                 <li><a href="index.html">Network</a></li>
-                                                <li><a href="index-1.html">I/O EMG STOP</a></li>    
-                                                <li><a href="user">user</a></li>                                               
+                                                <li><a href="index-1.html">I/O EMG STOP</a></li>
+                                                <li><a href="user">user</a></li>
                                             </ul>
-                                        </li>
-                                        <li>
-                                            <a data-toggle="collapse" data-target="#Charts" href="#">Monitor <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
-                                            <ul class="collapse dropdown-header-top">
-                                                <li><a href="index.html">i-NAV Current Pos.</a></li>
-                                                <li><a href="index-1.html">Current Job</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="events.html">Queuing</a></li>
-                                        <li><a href="events.html">Traffice Control</a></li>
-                                        <li><a href="events.html">Origin Home</a></li>
-                                        <li><a href="events.html">Data Logging</a></li>                                       
+                                        </li>                                     
                                     </ul>
                                 </nav>
                             </div>

@@ -64,7 +64,7 @@
 .sidebar-nav .metismenu li .icon-wrap{
 	margin-right:5px;
 	font-size:20px;
-	color:#FF4500;
+	color:#303030;
 }
 .sidebar-nav .metismenu li .sub-icon-mg{
 	margin-right:5px;

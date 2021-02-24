@@ -85,6 +85,18 @@ def register():
 def datalogging():
     return render_template("datalogging.html")
 
+@app.route('/payout')
+def payout():
+    return render_template("payout.html")
+
+@app.route('/carprocess')
+def carprocess():
+    return render_template("carprocess.html")
+
+@app.route('/message')
+def message():
+    return render_template("message.html")
+
 @app.route('/home')
 def home():
     return render_template("home.html")
@@ -92,6 +104,22 @@ def home():
 @app.route("/about")
 def about():
     return render_template("about.html")
+
+@app.route("/queuing")
+def queuing():
+    return render_template("queuing.html")
+   
+@app.route("/sectionlist")
+def sectionlist():
+    return render_template("sectionlist.html")
+   
+@app.route("/sectioncolumn")
+def sectioncolumn():
+    return render_template("sectioncolumn.html")
+
+@app.route("/car")
+def car():
+    return render_template("car.html")
 
 def home():
     return "This is home page "

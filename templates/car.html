@@ -1,0 +1,75 @@
+﻿{% extends "layout.html" %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/data-table/bootstrap-table.css') }}">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/data-table/bootstrap-editable.css') }}">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/notifications/notifications.css') }}">
+
+<script src="{{ url_for('static',filename='js/vendor/modernizr-2.8.3.min.js') }}"></script>
+{% block content %}
+<div class="data-table-area mg-b-15">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                <div class="product-status-wrap drp-lst">
+                    <h1>Traffic <span class="table-project-n">Control Monitor</span></h1>
+                    <!--<div class="add-product">
+                        <a href="register">Add User</a>
+                    </div>-->
+                    <div class="asset-inner">
+                        <table>
+                            <tr>
+                                <th>Car List</th>
+                                <th>Status</th>
+                            </tr>
+                            <tr>
+                                <td>i-Nav No.1</td>
+                                <td>Ready</td>
+                            </tr>
+                            <tr>
+                                <td>i-Nav No.2</td>
+                                <td>Process</td>
+                            </tr>
+                            <tr style="background-color:#65b12d;border-color:#65b12d;">
+                                <td style="color:#fff">i-Nav No.3</td>
+                                <td style="color:#fff">Ready</td>
+                            </tr>
+                            {%for i in range(4, 6)%}
+                            <tr>
+                                <td>i-Nav No.{{i}}</td>
+                                <td>Ready</td>
+                            </tr>
+                            {%endfor%}
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="alert-icon shadow-inner wrap-alert-b">
+                    <div class="alert-title">
+                        <h2>Command</h2>
+                    </div>
+                    <div class="alert alert-success alert-success-style1 alert-st-bg">
+                        <!--<button type="button" class="close sucess-op" data-dismiss="alert" aria-label="Close">
+                            <span class="icon-sc-cl" aria-hidden="true">×</span>
+                        </button>-->
+                        <h4>
+                            <i class="fa fa-check edu-checked-pro admin-check-pro admin-check-pro-clr" aria-hidden="true"></i>
+                            Home!
+                        </h4>
+                    </div>
+                    <div class="alert alert-info alert-success-style2 alert-st-bg1">
+                        <!--<button type="button" class="close sucess-op" data-dismiss="alert" aria-label="Close">
+                            <span class="icon-sc-cl" aria-hidden="true">×</span>
+                        </button>-->
+                        <h4>
+                            <i class="fa fa-info-circle edu-inform admin-check-pro admin-check-pro-clr1" aria-hidden="true"></i>
+                            Pause!
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
